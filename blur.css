@@ -1,13 +1,15 @@
+*{padding: 0;margin: 0;}
 #blur-div{
-	width: 800px;
-    height: 600px;
+	/*width: 800px;
+    height: 600px;*/
     margin: 0 auto;
     display: block;
     position: relative;
+    overflow: hidden;
 }
 #blur-img{
-	width: 800px;
-    height: 600px;
+	/*width: 800px;
+    height: 600px;*/
     margin: 0 auto;
     display: block;
     filter: blur(20px);
@@ -44,7 +46,7 @@
 
 }
 #reset-button{
-	left: 200px;
+	left: 50px;
 	background-color: #058;
 }
 #reset-button:hover{
@@ -52,7 +54,7 @@
 }
 #show-button{
 	background-color: green;
-    right: 200px;
+    right: 50px;
 }
 #show-button:hover{
 	background-color: #ccc;
