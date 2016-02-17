@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvasForClock</title>
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="800" style="border:1px solid #ccc; margin:0 auto;display:block"></canvas>
+	<script type="text/javascript">
+	var canvas=document.getElementById('canvas');
+	var context=canvas.getContext('2d');
+	//context.arc(300,300,200,0,Math.PI*1.5,false);
+	for(var i=0;i<10;i++){
+		context.beginPath();
+		context.arc(i*100,300,30,0,2*Math.PI*(i+1)/10,false);
+		context.lineWidth="5px";
+	    context.stroke();
+	}
+	for(var i=0;i<10;i++){
+		context.beginPath();
+		context.arc(i*100,420,30,0,2*Math.PI*(i+1)/10,false);
+		context.closePath();
+		context.lineWidth="5px";
+	    context.stroke();
+	}
+	</script>
+</body>
+</html>

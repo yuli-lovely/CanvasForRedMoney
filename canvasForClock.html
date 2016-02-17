@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvasForClock</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800" style="border:1px solid #ccc; margin:0 auto;display:block"></canvas>
+	<script type="text/javascript" src="digit.js"></script>
+	<script type="text/javascript" src="countdown.js"></script>
+	<script type="text/javascript">
+	// var canvas=document.getElementById("canvas");
+	// var context=canvas.getContext("2d");//绘图的上下文环境
+	// //绘制一个七巧板
+	// var tangram=[
+	// {p:[{x:0,y:0},{x:800,y:0},{x:400,y:400}],color:"#caff67"},
+	// {p:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:"#67becf"},
+	// {p:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:200,y:600}],color:"#ef3d61"},
+	// {p:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:"#f9f51a"},
+	// {p:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:"#a594c0"},
+	// {p:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:"#fa8ecc"},
+	// {p:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:"#f6ca29"}
+	// ]
+	// // window.onload=function(){
+	// // 	var canvas=document.getElementById('canvas');
+	// // 	var context=canvas.getContext('2d');
+	// // 	for(var i=0;i<tangram.length;i++){
+	// // 		draw(tangram[i],context);
+	// // 	}
+	// // 	function draw(piece,cxt){
+	// // 		cxt.beginPath();
+	// // 		cxt.moveTo(piece.p[0].x,piece.p[0].y);
+	// // 		for(var i=1;i<piece.p.length;i++){
+	// // 			cxt.lineTo(piece.p[i].x,piece.p[i].y);
+	// // 		}
+	// // 		cxt.closePath();
+	// // 		cxt.fillStyle=piece.color;
+	// // 		cxt.fill();
+	// // 	}
+	// // }
+	// //尝试绘制一个五角星
+	// var fiveStar=[
+	//  {p:[{x:50,y:50},{x:100,y:50}],color:"red"},
+	//  {p:[{x:100,y:50},{x:130,y:10}],color:"red"},
+	//  {p:[{x:130,y:10},{x:160,y:50}],color:"red"},
+	//  {p:[{x:160,y:50},{x:210,y:50}],color:"red"},
+	//  {p:[{x:210,y:50},{x:160,y:100}],color:"red"},
+	//  {p:[{x:160,y:100},{x:160,y:150}],color:"red"},
+	//  {p:[{x:160,y:150},{x:135,y:125}],color:"red"},
+	//  {p:[{x:135,y:125},{x:110,y:150}],color:"red"},
+	//  {p:[{x:110,y:150},{x:90,y:100}],color:"red"},
+	//  {p:[{x:90,y:100},{x:50,y:50}],color:"red"}
+	//  ]
+	//  window.onload=function(){
+	// 	var canvas=document.getElementById('canvas');
+	// 	var context=canvas.getContext('2d');
+	// 	for(var i=0;i<fiveStar.length;i++){
+	// 		draw(fiveStar[i],context);
+	// 		console.log("111");
+	// 	}
+	// 	function draw(piece,cxt){
+	// 		cxt.beginPath();
+	// 		cxt.moveTo(piece.p[0].x,piece.p[0].y);
+	// 		for(var i=1;i<piece.p.length;i++){
+	// 			cxt.lineTo(piece.p[i].x,piece.p[i].y);
+	// 		}
+	// 		cxt.closePath();
+	// 		cxt.strokeStyle="black"
+	// 		cxt.fillStyle=piece.color;
+	// 		cxt.stroke();
+	// 		cxt.fill();
+	// 	}
+	// }
+	</script>
+	
+	
+</body>
+</html>
