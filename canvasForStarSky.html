@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>五角星</title>
+	<title>一片星空</title>
 </head>
 <body>
-	<canvas id="canvas" width="800" height="800" style="border:1px solid #ccc; margin:0 auto;display:block"></canvas>
+	<canvas id="canvas" width="800" height="600" style="border:1px solid #ccc; margin:0 auto;display:block"></canvas>
 	<script type="text/javascript">
 	window.onload=function(){
 		var canvas=document.getElementById('canvas');
 	    var context=canvas.getContext('2d');
 	    context.lineJoin="round";//bevel
 	    context.miterLimit=10;
-	    drawStar(context,100,50,400,400,30);
+	    context.fillStyle="black";
+	    context.fillRect(0,0,canvas.width,canvas.height);
+	    for(var i=0;i<200;i++){//生成星空
+	    	var r=Math.random()*10+10;
+	    	var x=Math.random()*canvas.width;
+	    	var y=Math.random()*canvas.height;
+	    	var ro=Math.random()*10;
+	    	drawStar(context,r,r/2,x,y,ro);
+	    }
+	    
 	}
 	//画一个五角星
 	function drawStar(cxt,R,r,x,y,rot){
@@ -25,6 +34,9 @@
 
 		}
 		cxt.closePath();
+		cxt.strokeStyle="#fff";
+		cxt.fillStyle="#fff";
+		cxt.fill();
 		cxt.stroke();
 	}
 	
