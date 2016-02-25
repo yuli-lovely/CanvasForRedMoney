@@ -25,21 +25,26 @@
 	}
 	//画一个五角星
 	function drawStar(cxt,R,r,x,y,rot){
-		cxt.beginPath();
-		for(var i=0;i<5;i++){
-			cxt.lineTo(Math.cos((18+i*72-rot)/180*Math.PI)*R+x,
-							-Math.sin((18+i*72-rot)/180*Math.PI)*R+y);
-			cxt.lineTo(Math.cos((54+i*72-rot)/180*Math.PI)*r+x,
-							-Math.sin((54+i*72-rot)/180*Math.PI)*r+y);
-
-		}
-		cxt.closePath();
-		cxt.strokeStyle="#fff";
+		cxt.save();
+		cxt.translate(x,y);
+		cxt.rotate(rot/180*Math.PI);
+		setStar(cxt);
 		cxt.fillStyle="#fff";
 		cxt.fill();
 		cxt.stroke();
+		cxt.restore();
 	}
-	
+	function setStar(cxt){
+		cxt.beginPath();
+		for(var i=0;i<5;i++){
+			cxt.lineTo(Math.cos((18+i*72)/180*Math.PI),
+							-Math.sin((18+i*72)/180*Math.PI));
+			cxt.lineTo(Math.cos((54+i*72)/180*Math.PI),
+							-Math.sin((54+i*72)/180*Math.PI));
+
+		}
+		cxt.closePath();
+	}
 	</script>
 	
 	
