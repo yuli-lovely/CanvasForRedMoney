@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一片星空</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600" style="border:1px solid #ccc; margin:0 auto;display:block"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		var linearGrad=context.createLinearGradient(0,0,800,600);
+		linearGrad.addColorStop(0.0,'white');
+		linearGrad.addColorStop(0.25,'yellow');
+		linearGrad.addColorStop(0.5,'green');
+		linearGrad.addColorStop(0.75,"blue");
+		linearGrad.addColorStop(1.0,'black');
+		context.fillStyle=linearGrad;
+		context.fillRect(0,0,800,600);
+	}
+	// window.onload=function(){
+	// 	var canvas=document.getElementById('canvas');
+	//     var context=canvas.getContext('2d');
+	//     context.lineJoin="round";//bevel
+	//     context.miterLimit=10;
+	//     context.fillStyle="black";
+	//     context.fillRect(0,0,canvas.width,canvas.height);
+	//     for(var i=0;i<200;i++){//生成星空
+	//     	var r=Math.random()*10+10;
+	//     	var x=Math.random()*canvas.width;
+	//     	var y=Math.random()*canvas.height;
+	//     	var ro=Math.random()*10;
+	//     	drawStar(context,r,r/2,x,y,ro);
+	//     }
+	    
+	// }
+	// //画一个五角星
+	// function drawStar(cxt,R,r,x,y,rot){
+	// 	cxt.save();
+	// 	cxt.translate(x,y);
+	// 	cxt.rotate(rot/180*Math.PI);
+	// 	setStar(cxt);
+	// 	cxt.fillStyle="#fff";
+	// 	cxt.fill();
+	// 	cxt.stroke();
+	// 	cxt.restore();
+	// }
+	// function setStar(cxt){
+	// 	cxt.beginPath();
+	// 	for(var i=0;i<5;i++){
+	// 		cxt.lineTo(Math.cos((18+i*72)/180*Math.PI),
+	// 						-Math.sin((18+i*72)/180*Math.PI));
+	// 		cxt.lineTo(Math.cos((54+i*72)/180*Math.PI),
+	// 						-Math.sin((54+i*72)/180*Math.PI));
+
+	// 	}
+	// 	cxt.closePath();
+	// }
+	</script>
+	
+	
+</body>
+</html>
